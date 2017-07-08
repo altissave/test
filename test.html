@@ -66,17 +66,22 @@
             map.setCenter(pos);
               
 //         obj.push(dataset);
-            $.each(dataset,function(i,e){
-                if(e.Latitude != 0 || e.Longitude != 0){
-                    obj.push({
-                        lat:e.Latitude,
-                        lng:e.Longitude,
-                        branch: e.BranchGroupCode
-                    });
-                }
+//             $.each(dataset,function(i,e){
+//                 if(e.Latitude != 0 || e.Longitude != 0){
+//                     obj.push({
+//                         lat:e.Latitude,
+//                         lng:e.Longitude,
+//                         branch: e.BranchGroupCode
+//                     });
+//                 }
                 
-            });
+//             });
             
+		   obj.push({
+                        lat:14.949528,
+                        lng: 101.948952,
+                        branch: "map 1"
+                    });
               console.log(obj);
           
             map = new GMaps({
