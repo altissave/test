@@ -89,7 +89,15 @@
                 lat: pos.lat,
                 lng: pos.lng
             });
-            
+            map.addMarker({
+                        lat: $("#lati").text(),
+                        lng: $("#long").text(),
+                        title: 'Lima',
+                        icon:'https://mt.googleapis.com/vt/icon/name=icons/onion/1493-wht-blank_maps-4x.png&filter=ffDB4436',
+                        infoWindow: {
+                            content: '<a href="http://maps.google.com/maps?q='+$("#lati").text()+','+$("#long").text()+'">ดูใน google map</a>'
+                        }
+                          });
             $.each(obj, function (i, e) {
                 if(e.branch == "0001"){
                         map.addMarker({
@@ -115,15 +123,7 @@
                 
                 
             });
-              map.addMarker({
-                        lat: $("#lati").text(),
-                        lng: $("#long").text(),
-                        title: 'Lima',
-                        icon:'https://mt.googleapis.com/vt/icon/name=icons/onion/1493-wht-blank_maps-4x.png&filter=ffDB4436',
-                        infoWindow: {
-                            content: '<a href="http://maps.google.com/maps?q='+$("#lati").text()+','+$("#long").text()+'">ดูใน google map</a>'
-                        }
-                          });
+              
               
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
